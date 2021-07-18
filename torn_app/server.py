@@ -87,6 +87,9 @@ def make_app():
 
 
 if __name__ == "__main__":
+    data_folder = os.path.join(CUR_DIR, "data")
+    if not os.path.exists(data_folder):
+        os.mkdir(data_folder)
     app = make_app()
     app.listen(PORT)
     print('Server listening on port ' + str(PORT))
