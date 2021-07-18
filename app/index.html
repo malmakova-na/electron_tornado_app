@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>app with Electron</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/searchForm.css">
+    <link rel="stylesheet" href="styles/sendForm.css">
+    <script defer src="appfunctions.js"></script>
+  </head>
+  <body>
+    <div class='mainApp'>
+        <div class="topBar">
+            <div class="titleBar">
+                <div class="title">App</div>
+            </div>
+        </div>
+        <main id="contentArea">
+                <div class="container-item container-item_left">
+                    <div class="container-item__heading">Search</div>
+                    <form id="searchForm">
+                        <div class="input-group">
+                            <input
+                                class="search__input"
+                                type="search"
+                                name="search"
+                                placeholder="Enter ID"
+                                autocomplete="off"
+                                required
+                            />
+                            <span class="input-group-btn">
+                                <button class="btn" type="submit">
+                                    <img width="16" height="16" src="img/search.svg" alt="search submit">
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                    <div id="results"></div>
+                </div>
+                <div class="container-item container-item_right">
+                    <div class="container-item__heading">Add New User</div>
+                    <form id="addForm" >
+                        <label for="user-id">USER ID</label>
+                        <input type="text"  placeholder="user ID" id="user-id" name="id">
+                        <label for="user-name">NAME</label>
+                        <input type="text"  placeholder="username" id="user-name" name="name">
+                        <label for="user-age">AGE</label>
+                        <input type="text"   placeholder="age" id="user-age" name="age">
+                        <button class="btn" type="submit">Send</button>
+                        <div id="message"></div>
+                    </form>
+                </div>
+        </main>
+    </div>
+  </body>
+</html>
