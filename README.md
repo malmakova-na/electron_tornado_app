@@ -1,5 +1,5 @@
 # electron_tornado_app
-an application with an Electron.js and a Tornado Web Server to search user data by id
+An application with an Electron.js and a Tornado Web Server to search user data by id and add new user
 ## How to use
 1) to add a user, fill out the appropriate form and save it
 2) to find a user, enter the user id in the search bar
